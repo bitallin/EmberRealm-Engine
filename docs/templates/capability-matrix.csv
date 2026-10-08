@@ -1,0 +1,11 @@
+capability_id,capability,official_branch,engine_version,client_version,db_schema,status,required_for,probe_task,evidence_ref,limitation
+CAP01,lua_version_and_require,,,,,unverified,M1,R03,,requires_locked_runtime
+CAP02,server_and_client_encoding,,,,,unverified,M2,R03,,documented_gb2312_utf8_needs_probe
+CAP03,lua_message_and_submitform,,,,,unverified,M3,R03,,signature_size_and_reserved_ids_unknown
+CAP04,http_nonblocking_https_auth,,,,,unverified,P02_P04,R03,,transport_and_callback_thread_unknown
+CAP05,event_timer_object_lifecycle,,,,,unverified,M1,R05,,reload_and_logout_needs_probe
+CAP06,atomic_reward_with_durable_idempotency,,,,,unverified,real_payment,R06,,release_gate_not_assumed
+CAP07,gui_export_and_multiplatform,,,,,unverified,M3_M5,R03,,delivery_scope_unknown
+CAP08,official_tool_cli_and_determinism,,,,,unverified,M2,T06,,manual_steps_may_be_required
+CAP09,hot_update_integrity_and_rollback,,,,,unverified,M3_M5,V04,,real_client_verification_required
+CAP10,cross_server_ownership_and_recovery,,,,,unverified,M6,X01,,no_double_write_guarantee_assumed
