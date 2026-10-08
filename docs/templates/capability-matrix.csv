@@ -9,3 +9,13 @@ CAP07,gui_export_and_multiplatform,,,,,unverified,M3_M5,R03,,delivery_scope_unkn
 CAP08,official_tool_cli_and_determinism,,,,,unverified,M2,T06,,manual_steps_may_be_required
 CAP09,hot_update_integrity_and_rollback,,,,,unverified,M3_M5,V04,,real_client_verification_required
 CAP10,cross_server_ownership_and_recovery,,,,,unverified,M6,X01,,no_double_write_guarantee_assumed
+CAP11,official_processes_login_gateway_controller,,,,,unverified,M0_M1,R02,,topology_identity_and_control_require_delivery
+CAP12,official_client_platform_delivery,,,,,unverified,M0_M5,R01,,pc_android_ios_h5_license_and_package_scope_unknown
+CAP13,character_map_inventory_storage,,,,,unverified,M3_M4,R07,,configuration_api_ui_and_persistence_need_probe
+CAP14,combat_skill_buff_monster_drop,,,,,unverified,M3_M4,R07,,builtin_rules_and_product_differences_need_probe
+CAP15,quest_team_guild_friend_mail,,,,,unverified,M3_M4,R07,,builtin_coverage_permissions_and_reward_semantics_unknown
+CAP16,shop_trade_auction_rank_activity,,,,,unverified,M4,R07,,product_scope_and_atomic_operations_need_probe
+CAP17,official_anticheat_cdn_service,,,,,unverified,M5_M6,R08,,license_interfaces_audit_and_failure_behavior_unknown
+CAP18,official_schema_migration_backup_restore,,,,,unverified,M1_M6,ENV03,,supported_sql_and_real_restore_chain_required
+CAP19,official_account_channel_recharge_delivery,,,,,unverified,M3_M6,R08,,identity_payment_result_and_durable_idempotency_not_assumed
+CAP20,official_gm_toolserver_cdk_announcement_analytics,,,,,unverified,M4_M6,R08,,permissions_audit_supported_api_and_product_gaps_unknown

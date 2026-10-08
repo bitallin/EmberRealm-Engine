@@ -22,3 +22,7 @@ T01 验证跨平台 CLI、依赖锁和开发命令；P01 验证订单/唯一约�
 ## 后果
 
 形成少量可维护组件；需要两种开发运行时，但官方集成仍需独立 Windows Runner。若增加新语言/中间件，必须说明需求与运维成本。关联[选型基线](../technical-route.md)、[工具链](../tooling-release.md)及 P01/T01。
+
+## 后续细化
+
+[ADR-0003](0003-delivery-boundaries.md)明确 Go/PostgreSQL/React 仅服务必要自有模块；官方平台满足需求时优先接入，不为选型而建设第二套系统。GitHub 托管已由 DOC04 完成，CI/Runner 仍未实现；本决策语言/版本的待探针状态保持。

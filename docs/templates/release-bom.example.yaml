@@ -7,6 +7,15 @@ created_at_utc: null
 environment: null
 target_platforms: []
 
+# 交付分类与实际纳入范围；仅引用脱敏记录，不代替许可或能力证据。
+delivery_scope:
+  feature_scope_report_ref: null
+  reuse_development_matrix_revision: null
+  included_modules: [] # 每项：name/classification/evidence_ref；按需求可多类
+  excluded_modules: [] # 每项：name/reason，不纳入需明确
+  official_services: [] # 每项：name/version_or_contract/license_record_ref/evidence_ref
+  payment_delivery_authority: null # official / emberrealm / not-included；同订单单一执行链
+
 source:
   repository: null
   revision: null

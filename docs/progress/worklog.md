@@ -27,3 +27,30 @@
 - 提交/推送：初始提交 `964fe70d6db600bc991507724c0038765ad609b9`（30 文件）经 `git push -u origin main` 成功创建远端 main，并建立 upstream；`git ls-remote origin refs/heads/main` 返回与本地 HEAD 完全相同的 SHA，首次推送后工作树干净。本条结果及完成状态通过后续文档提交一并同步。
 - 当前状态：Git 初始化与首次文档推送完成；未创建发布标签，也未开展业务代码。
 - 下一步：T01 离线工程骨架；官方环境依赖保持原状态。
+
+## W003 · 2026-10-08 · 全文复用与开发分工完善
+
+- 请求/本轮子范围：按用户本轮官方内核同构方案完整完善当前文档，明确直接复用、配置、适配、必要自研和后置范围；仅文档工作。
+- 关联任务/里程碑：DOC05 完成；新增 R07、R08、SPEC01 均未实施；M0 文档部分，M1—M7 仍未开始。调整 V/G/P/C/OPS 的工作类型、相关前置和验收口径，不改旧编号。
+- 开始状态与用户变更：已读取 AGENTS、进度/日志、技术路线、全部专题、任务/路线图与本轮附件；未发现后续目录级 AGENTS。Git 工作树开始时干净，HEAD 为 `d42f49e`，没有既有用户改动需要合并；此前仅文档和模板，官方环境仍未取得。
+- 实际交付：文档基线 0.2；[复用与开发总表](../reuse-development-matrix.md)、[游戏内容分工](../gameplay-content.md)、[功能分工模板](../templates/feature-scope.md)、[ADR-0003](../decisions/0003-delivery-boundaries.md)；本轮原文逐字节归档。复用机制、产品数据、自有差异与组合验收分别说明。
+- 变更文件：根 README；docs 下 README、project-overview、research、technical-route、architecture、runtime-integration、lua-client、gameplay-content、reuse-development-matrix、data-storage、protocol-security、platform-services、tooling-release、deployment-operations、testing、backlog、roadmap、risks-and-questions；decisions 下 README/0001/0002/0003；reference 下 README/runtime-reuse-proposal；templates 下 feature-scope/capability-matrix/release-bom/release-checklist/work-record；progress 下 README/worklog/validation-w003.json。旧原文归档与 AGENTS 保持原样。
+- 分工与决策：直接复用 M2/网关/DB/客户端/Lua/基础机制/官方工具；内容配置与 UI/差异规则由本项目制作。R07 查内置系统覆盖，R08 查官方账号/充值/GM/CDK/反外挂/CDN 等契约；满足时接入，仅缺项自研。支付同订单单一发货链，官方/自有执行都须过持久/幂等/崩溃验收。工具自研指校验与流程封装，Git/CI/监控/备份通用工具优先复用。新增 RISK13/14；修正风险文件中已过时的“仓库托管待选”。
+- 验证环境与方式：当前 macOS/Python 3.9.5；一次性 `/tmp/emberrealm-doccheck-w003.py` 做 UTF-8、围栏/表格、本地链接/锚点、任务/能力 ID、显式依赖无环、CSV、PyYAML 模板解析、归档 hash 和本轮附件字节比较；`git diff --check` 检查空白。该临时脚本不是 T01/QA01 的项目工具交付。
+- 验证等级与结果：**静态文档验证通过**，最终扫描计数与限制见[报告](validation-w003.json)。61 个任务 ID 唯一，显式任务依赖无环；20 项能力全部保持 `unverified`，BOM 为 `planning`，没有虚构版本或运行结果。两份原文 SHA-256 符合来源记录；本轮 22778 字节归档与附件逐字节一致，旧 46105 字节归档未变。人工复核分类、平台唯一发货链、分阶段子能力前置与进度一致。没有执行离线模拟、官方运行或生产验证。
+- 未完成/依赖：业务代码、工具链、runtime、产品完整规格/数值、平台服务、多端、性能与上线仍未实现；官方包/许可证/Windows/SQL、服务权限、设备/渠道/支付账号和资产保证仍待对应任务。文档完成不解除这些依赖。
+- 下一步：SPEC01 离线切片规格与 T01 工程骨架；随后 T02/T03/T04/T05/T07。官方包与环境到位后 R01—03/R06，按 R07/R08 子能力证据推进 V/G/P/C，不重复开发内置机制。
+- 版本/commit/制品：文档基线 0.2；本轮变更在本地工作树，未提交/推送、未创建软件版本标签或可运行制品。原 W001/W002 日志追加保留。
+
+## W004 · 2026-10-08 · 复用路线原则复核
+
+- 请求/本轮子范围：评估当前路线和文档是否最大程度满足“参考并对齐 996、使用 Lua 和 M2、尽量不重写”；只做设计审查与进度记录。
+- 关联任务/里程碑：DOC05 交付复核，R07/R08/SPEC01 后续落实；没有任务状态或里程碑验收变化。
+- 开始状态：已读进度/最近日志、技术路线、复用矩阵、ADR-0003 与任务依赖；工作树包含 W003 的 33 个文档/模板/证据文件变更，全部保留。官方包和运行环境仍未获得。
+- 审查结论：设计层面充分符合。对齐目录/表/公开 API/GUI/资源/版本与发布外部契约；M2、网关、DB/客户端/Lua/工具底层复用；内置游戏机制配置优先，自有 Lua/UI 只补产品差异；外围官方服务先评估后接入；独立内核当前无实现任务。
+- 实施关注：ER runtime 不扩成复制官方全套 API 的框架；自有 schema 保留官方字段/ID 映射，不另造不必要数据体系；Python/Go/PG/React 选型不驱动全套平台建设，按实际差异裁剪。均属 ADR-0003、RISK13/14 已有边界，不新增架构决策或风险。
+- 实际变更文件：仅 `docs/progress/README.md`、`docs/progress/worklog.md`；设计基线保持 0.2。
+- 验证方式与结果：人工逐项对照原则/组件/任务前置和验收；检查本轮两份文件的 UTF-8、围栏、本地链接/锚点及唯一工作编号，`git diff --check` 通过。验证等级为静态文档审查，既有 W003 报告作为该轮历史证据保留。
+- 限制/未完成：不能据规划证明实际复用已达最大值，也不计算无分母复用率。20 项能力仍 unverified；官方版本/许可、Windows/SQL、服务接口和账号/设备依赖仍需锁版实测。没有模拟、官方或生产验证。
+- 下一步：SPEC01/T01 离线工作可继续；获得交付后按 R07/R08 实测决定每项接入/配置/差异范围。未证明官方能力不足时不立项底层重写。
+- 版本/commit/制品：无新提交、推送、标签或运行制品；历史日志追加保留。

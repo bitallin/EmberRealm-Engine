@@ -8,9 +8,11 @@
 
 ## 当前状态
 
-截至 **2026-10-08（Asia/Shanghai）**，已建立设计与实施文档基线，尚未实现业务代码，也尚未获得或验证官方运行环境。已初始化 Git，分支为 `main`，远端为 [bitallin/EmberRealm-Engine](https://github.com/bitallin/EmberRealm-Engine)。所有版本号、上线日期和承载指标需要通过后续里程碑验证。
+截至 **2026-10-08（Asia/Shanghai）**，已建立并按本轮方案完善文档基线（0.2），明确逐项复用、配置、适配、自研与后置分工；尚未实现业务代码，也尚未获得或验证官方运行环境。已初始化 Git，分支为 `main`，远端为 [bitallin/EmberRealm-Engine](https://github.com/bitallin/EmberRealm-Engine)。所有版本号、上线日期和承载指标需要通过后续里程碑验证。
 
 - [文档导航](docs/README.md)：阅读顺序与专题入口。
+- [复用与开发边界总表](docs/reuse-development-matrix.md)：每个组件直接复用什么、需要开发什么。
+- [游戏内容与业务分工](docs/gameplay-content.md)：玩法机制、数据、脚本与 UI 的交付边界。
 - [完整实现路线图](docs/roadmap.md)：M0—M7、依赖、交付物和验收门槛。
 - [任务清单](docs/backlog.md)：可逐项推进的实现工作。
 - [项目进度](docs/progress/README.md)：实际状态、下一步和外部依赖。

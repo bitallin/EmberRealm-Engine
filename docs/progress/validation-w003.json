@@ -1,0 +1,41 @@
+{
+  "work_id": "W003",
+  "date": "2026-10-08",
+  "timezone": "Asia/Shanghai",
+  "level": "static_documentation",
+  "result": "passed",
+  "python_version": "3.9.5",
+  "validator": "/tmp/emberrealm-doccheck-w003.py (one-off; not project tooling)",
+  "checks": {
+    "utf8_files": 36,
+    "markdown_files": 32,
+    "authored_markdown_checked": 30,
+    "local_links_and_anchors": 97,
+    "markdown_tables": 49,
+    "unique_tasks": 61,
+    "explicit_task_dependencies_acyclic": true,
+    "capabilities": 20,
+    "capability_status": "all_unverified",
+    "bom_yaml": "parsed_planning",
+    "new_archive_byte_equal": true,
+    "archives": [
+      {
+        "file": "docs/reference/original-proposal.md",
+        "bytes": 46105,
+        "sha256": "0f8dc4e82c907fc70e0bc2a3dee0a854d5b39ceb2140a1625f685a4a43ed730b"
+      },
+      {
+        "file": "docs/reference/runtime-reuse-proposal.md",
+        "bytes": 22778,
+        "sha256": "7212c24bc63f72b43e32afe7557d2b51bef3e2f9b37fc444bfa724c2500d52e4"
+      }
+    ]
+  },
+  "limitations": [
+    "Two verbatim source archives excluded from Markdown syntax/link checks; UTF-8/hash checked.",
+    "External web pages and official runtime not verified in W003.",
+    "Task graph validates explicit ID edges; conditional subscopes and phase gates are reviewed in documentation.",
+    "No business, build, fake runtime, official integration, payment or production tests performed."
+  ],
+  "errors": []
+}
